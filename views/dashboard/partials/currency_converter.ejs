@@ -1,0 +1,40 @@
+<div class="content" id="panel3-9">
+  <div class="medium-9 columns">
+    <h4>Currency Converter</h4>
+
+    <div class="row">
+      <div class="medium-2 columns">
+        <label>From
+          <select id="from_currency" onchange="doConversion()">
+            <% for (var i=0; i < Object.keys(exRates).length; i++) { %>
+              <option><%= Object.keys(exRates)[i] %></option>
+            <% } %>
+          </select>
+        </label>
+      </div>
+
+      <div class="medium-4 columns">
+        <label>Amount
+          <input type="number" id="from_amount" onchange="doConversion()">
+        </label>
+      </div>
+
+      <div class="medium-2 columns">
+        <label>To
+          <select id="to_currency" onchange="doConversion()">
+            <% for (var i=0; i < Object.keys(exRates).length; i++) { %>
+              <option><%= Object.keys(exRates)[i] %></option>
+            <% } %>
+          </select>
+        </label>
+      </div>
+
+      <div class="medium-4 columns">
+        <label>Amount
+          <input type="number" id="to_amount" onchange="doConversion()">
+        </label>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="content" id="panel3-6">
+  <form class="medium-9 columns" role="form" action="/transaction/send" method="post">
+
+    <h4>Send Money</h4>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <label>From Account
+          <select name="fromAccount">
+            <% for (var i=0; i < user.accounts.length; i++) { %>
+              <option><%= user.accounts[i].id %> | <%= user.accounts[i].type %> | <%= user.accounts[i].currency %></option>
+            <% } %>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="row __qf-sm-row">
+      <div class="large-6 columns">
+        <label>To Account
+          <input type="text" name="toAccount" required>
+        </label>
+      </div>
+
+      <div class="large-6 columns">
+        <label>Amount
+          <input type="number" name="amount" required>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <button type="submit" class="button right">Send</button>
+      </div>
+    </div>
+
+  </form>
+</div>

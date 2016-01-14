@@ -1,0 +1,23 @@
+<div class="content" id="panel3-7">
+  <div class="medium-9 columns">
+    <h4>Exchange Rates</h4>
+    <p>Base currency: USD</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Currency</th>
+          <th>Rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i=0; i < Object.keys(exRates).length; i++) { %>
+          <tr>
+            <td><%= Object.keys(exRates)[i] %></td>
+            <td><%= exRates[Object.keys(exRates)[i]] %></td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>

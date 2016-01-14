@@ -1,0 +1,366 @@
+<div class="content" id="panel3-8">
+  <div class="medium-9 columns">
+    <h4>Personal Info</h4>
+
+    <div class="row">
+      <div class="large-2 columns">
+        <label>Title
+          <select name="title">
+            <option <%= (user.title === 'Mr.') ? 'selected' : '' %>>Mr.</option>
+            <option <%= (user.title === 'Ms.') ? 'selected' : '' %>>Ms.</option>
+            <option <%= (user.title === 'Mrs.') ? 'selected' : '' %>>Mrs.</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="large-5 columns">
+        <label>First Name
+          <input type="text" name="first_name" value="<%= user.first_name %>">
+        </label>
+      </div>
+
+      <div class="large-5 columns">
+        <label>Last Name
+          <input type="text" name="last_name" value="<%= user.last_name %>">
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-2 columns">
+        <label>Gender
+          <select name="gender">
+            <option value="m" <%= (user.gender === 'm') ? 'selected' : '' %>>Male</option>
+            <option value="f" <%= (user.gender === 'f') ? 'selected' : '' %>>Female</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="large-4 columns">
+        <label>Date of Birth
+          <input type="date" name="date_of_birth" value="<%= new Date(user.date_of_birth).getDate() %>/<%= new Date(user.date_of_birth).getMonth()+1 %>/<%= new Date(user.date_of_birth).getFullYear() %>">
+        </label>
+      </div>
+
+      <div class="large-6 columns">
+        <label>Marital Status
+          <select name="marital_status">
+            <option value="S" <%= (user.marital_status === 'S') ? 'selected' : '' %>>Single</option>
+            <option value="M" <%= (user.marital_status === 'M') ? 'selected' : '' %>>Married/Civil Partner</option>
+            <option value="L" <%= (user.marital_status === 'L') ? 'selected' : '' %>>Living with partner</option>
+            <option value="Z" <%= (user.marital_status === 'Z') ? 'selected' : '' %>>Separated</option>
+            <option value="D" <%= (user.marital_status === 'D') ? 'selected' : '' %>>Divorced/Dissolution of a Civil Partnership</option>
+            <option value="W" <%= (user.marital_status === 'W') ? 'selected' : '' %>>Surviving Spouse/Surviving Civil Partner</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <label>Phone Number
+          <input type="text" name="phone_no" value="<%= user.phone_no %>">
+        </label>
+      </div>
+
+      <div class="large-4 columns">
+        <label>Nationality
+          <select name="nationality">
+            <option value="GB" <%= (user.nationality === 'GB') ? 'selected' : '' %>>British</option>
+            <option value="AF" <%= (user.nationality === 'AF') ? 'selected' : '' %>>Afghan</option>
+            <option value="AX" <%= (user.nationality === 'AX') ? 'selected' : '' %>>Alanders</option>
+            <option value="AL" <%= (user.nationality === 'AL') ? 'selected' : '' %>>Albanian</option>
+            <option value="DZ" <%= (user.nationality === 'DZ') ? 'selected' : '' %>>Algerian</option>
+            <option value="US" <%= (user.nationality === 'US') ? 'selected' : '' %>>American</option>
+            <option value="AS" <%= (user.nationality === 'AS') ? 'selected' : '' %>>American Samoan</option>
+            <option value="UM" <%= (user.nationality === 'UM') ? 'selected' : '' %>>American - US Minor Outlying Islands</option>
+            <option value="AD" <%= (user.nationality === 'AD') ? 'selected' : '' %>>Andorran</option>
+            <option value="AO" <%= (user.nationality === 'AO') ? 'selected' : '' %>>Angolan</option>
+            <option value="AI" <%= (user.nationality === 'AI') ? 'selected' : '' %>>Anguillan </option>
+            <option value="AQ" <%= (user.nationality === 'AQ') ? 'selected' : '' %>>Antarctican</option>
+            <option value="GS" <%= (user.nationality === 'GS') ? 'selected' : '' %>>Antarctican - Sth Georgia/Sth Sandwich</option>
+            <option value="AG" <%= (user.nationality === 'AG') ? 'selected' : '' %>>Antiguan </option>
+            <option value="AR" <%= (user.nationality === 'AR') ? 'selected' : '' %>>Argentinean</option>
+            <option value="AM" <%= (user.nationality === 'AM') ? 'selected' : '' %>>Armenian</option>
+            <option value="AW" <%= (user.nationality === 'AW') ? 'selected' : '' %>>Aruban</option>
+            <option value="AU" <%= (user.nationality === 'AU') ? 'selected' : '' %>>Australian</option>
+            <option value="HM" <%= (user.nationality === 'HM') ? 'selected' : '' %>>Australian - Heard Island And McDonald Islands</option>
+            <option value="AT" <%= (user.nationality === 'AT') ? 'selected' : '' %>>Austrian</option>
+            <option value="AZ" <%= (user.nationality === 'AZ') ? 'selected' : '' %>>Azerbaijani</option>
+            <option value="BS" <%= (user.nationality === 'BS') ? 'selected' : '' %>>Bahamian</option>
+            <option value="BH" <%= (user.nationality === 'BH') ? 'selected' : '' %>>Bahraini</option>
+            <option value="BD" <%= (user.nationality === 'BD') ? 'selected' : '' %>>Bangladeshi</option>
+            <option value="BB" <%= (user.nationality === 'BB') ? 'selected' : '' %>>Barbadian / Barbudans</option>
+            <option value="BY" <%= (user.nationality === 'BY') ? 'selected' : '' %>>Belarusian</option>
+            <option value="BE" <%= (user.nationality === 'BE') ? 'selected' : '' %>>Belgian</option>
+            <option value="BZ" <%= (user.nationality === 'BZ') ? 'selected' : '' %>>Belizean</option>
+            <option value="BJ" <%= (user.nationality === 'BJ') ? 'selected' : '' %>>Beninese</option>
+            <option value="BM" <%= (user.nationality === 'BM') ? 'selected' : '' %>>Bermudian</option>
+            <option value="BT" <%= (user.nationality === 'BT') ? 'selected' : '' %>>Bhutanese</option>
+            <option value="BO" <%= (user.nationality === 'BO') ? 'selected' : '' %>>Bolivian</option>
+            <option value="BA" <%= (user.nationality === 'BA') ? 'selected' : '' %>>Bosnian</option>
+            <option value="BW" <%= (user.nationality === 'BW') ? 'selected' : '' %>>Botswanan</option>
+            <option value="BR" <%= (user.nationality === 'BR') ? 'selected' : '' %>>Brazilian</option>
+            <option value="FK" <%= (user.nationality === 'FK') ? 'selected' : '' %>>British Falkland Islander</option>
+            <option value="GI" <%= (user.nationality === 'GI') ? 'selected' : '' %>>British Gibraltan</option>
+            <option value="IO" <%= (user.nationality === 'IO') ? 'selected' : '' %>>British Overseas Citizen</option>
+            <option value="VG" <%= (user.nationality === 'VG') ? 'selected' : '' %>>British Virgin Islander</option>
+            <option value="BN" <%= (user.nationality === 'BN') ? 'selected' : '' %>>Bruneian</option>
+            <option value="BG" <%= (user.nationality === 'BG') ? 'selected' : '' %>>Bulgarian</option>
+            <option value="BF" <%= (user.nationality === 'BF') ? 'selected' : '' %>>Burkinabe</option>
+            <option value="BI" <%= (user.nationality === 'BI') ? 'selected' : '' %>>Burundian</option>
+            <option value="KH" <%= (user.nationality === 'KH') ? 'selected' : '' %>>Cambodian</option>
+            <option value="CM" <%= (user.nationality === 'CM') ? 'selected' : '' %>>Cameroonian</option>
+            <option value="CA" <%= (user.nationality === 'CA') ? 'selected' : '' %>>Canadian</option>
+            <option value="CV" <%= (user.nationality === 'CV') ? 'selected' : '' %>>Cape Verdean</option>
+            <option value="KY" <%= (user.nationality === 'KY') ? 'selected' : '' %>>Caymanian</option>
+            <option value="CF" <%= (user.nationality === 'CF') ? 'selected' : '' %>>Central African</option>
+            <option value="TD" <%= (user.nationality === 'TD') ? 'selected' : '' %>>Chadian</option>
+            <option value="CL" <%= (user.nationality === 'CL') ? 'selected' : '' %>>Chilean</option>
+            <option value="CN" <%= (user.nationality === 'CN') ? 'selected' : '' %>>Chinese</option>
+            <option value="CX" <%= (user.nationality === 'CX') ? 'selected' : '' %>>Christmas Islander</option>
+            <option value="CC" <%= (user.nationality === 'CC') ? 'selected' : '' %>>Cocos (Keeling) Islander</option>
+            <option value="CO" <%= (user.nationality === 'CO') ? 'selected' : '' %>>Colombian</option>
+            <option value="KM" <%= (user.nationality === 'KM') ? 'selected' : '' %>>Comoran</option>
+            <option value="CG" <%= (user.nationality === 'CG') ? 'selected' : '' %>>Congolese Citizen</option>
+            <option value="CD" <%= (user.nationality === 'CD') ? 'selected' : '' %>>Congolese National</option>
+            <option value="CK" <%= (user.nationality === 'CK') ? 'selected' : '' %>>Cook Islander</option>
+            <option value="CR" <%= (user.nationality === 'CR') ? 'selected' : '' %>>Costa Rican</option>
+            <option value="HR" <%= (user.nationality === 'HR') ? 'selected' : '' %>>Croatian</option>
+            <option value="CU" <%= (user.nationality === 'CU') ? 'selected' : '' %>>Cuban</option>
+            <option value="CY" <%= (user.nationality === 'CY') ? 'selected' : '' %>>Cypriot</option>
+            <option value="CZ" <%= (user.nationality === 'CZ') ? 'selected' : '' %>>Czech</option>
+            <option value="DK" <%= (user.nationality === 'DK') ? 'selected' : '' %>>Danish</option>
+            <option value="DJ" <%= (user.nationality === 'DJ') ? 'selected' : '' %>>Djibouti</option>
+            <option value="DM" <%= (user.nationality === 'DM') ? 'selected' : '' %>>Dominican</option>
+            <option value="DO" <%= (user.nationality === 'DO') ? 'selected' : '' %>>Dominican (Republican)</option>
+            <option value="NL" <%= (user.nationality === 'NL') ? 'selected' : '' %>>Dutch / Netherlander</option>
+            <option value="BQ" <%= (user.nationality === 'BQ') ? 'selected' : '' %>>Dutch - Bonaire </option>
+            <option value="CW" <%= (user.nationality === 'CW') ? 'selected' : '' %>>Dutch - Curacao</option>
+            <option value="SX" <%= (user.nationality === 'SX') ? 'selected' : '' %>>Dutch - Sint Maarten</option>
+            <option value="EC" <%= (user.nationality === 'EC') ? 'selected' : '' %>>Ecuadorian</option>
+            <option value="EG" <%= (user.nationality === 'EG') ? 'selected' : '' %>>Egyptian</option>
+            <option value="AE" <%= (user.nationality === 'AE') ? 'selected' : '' %>>Emirati</option>
+            <option value="GQ" <%= (user.nationality === 'GQ') ? 'selected' : '' %>>Equatorial Guinean</option>
+            <option value="ER" <%= (user.nationality === 'ER') ? 'selected' : '' %>>Eritrean</option>
+            <option value="EE" <%= (user.nationality === 'EE') ? 'selected' : '' %>>Estonian</option>
+            <option value="ET" <%= (user.nationality === 'ET') ? 'selected' : '' %>>Ethiopian</option>
+            <option value="FO" <%= (user.nationality === 'FO') ? 'selected' : '' %>>Faroese</option>
+            <option value="FJ" <%= (user.nationality === 'FJ') ? 'selected' : '' %>>Fijian</option>
+            <option value="FI" <%= (user.nationality === 'FI') ? 'selected' : '' %>>Finnish</option>
+            <option value="FR" <%= (user.nationality === 'FR') ? 'selected' : '' %>>French</option>
+            <option value="GF" <%= (user.nationality === 'GF') ? 'selected' : '' %>>French Guianese</option>
+            <option value="PF" <%= (user.nationality === 'PF') ? 'selected' : '' %>>French Polynesian</option>
+            <option value="BL" <%= (user.nationality === 'BL') ? 'selected' : '' %>>French - Saint Barthelemy</option>
+            <option value="MF" <%= (user.nationality === 'MF') ? 'selected' : '' %>>French - Saint Martin</option>
+            <option value="PM" <%= (user.nationality === 'PM') ? 'selected' : '' %>>French - Saint Pierre And Miquelon</option>
+            <option value="TF" <%= (user.nationality === 'TF') ? 'selected' : '' %>>French Southern Territory</option>
+            <option value="GA" <%= (user.nationality === 'GA') ? 'selected' : '' %>>Gabonese</option>
+            <option value="GM" <%= (user.nationality === 'GM') ? 'selected' : '' %>>Gambian</option>
+            <option value="GE" <%= (user.nationality === 'GE') ? 'selected' : '' %>>Georgian</option>
+            <option value="DE" <%= (user.nationality === 'DE') ? 'selected' : '' %>>German</option>
+            <option value="GH" <%= (user.nationality === 'GH') ? 'selected' : '' %>>Ghanaian</option>
+            <option value="GR" <%= (user.nationality === 'GR') ? 'selected' : '' %>>Greek</option>
+            <option value="GL" <%= (user.nationality === 'GL') ? 'selected' : '' %>>Greenlander</option>
+            <option value="GD" <%= (user.nationality === 'GD') ? 'selected' : '' %>>Grenadian</option>
+            <option value="GP" <%= (user.nationality === 'GP') ? 'selected' : '' %>>Guadeloupian</option>
+            <option value="GU" <%= (user.nationality === 'GU') ? 'selected' : '' %>>Guamanian</option>
+            <option value="GT" <%= (user.nationality === 'GT') ? 'selected' : '' %>>Guatemalan</option>
+            <option value="GG" <%= (user.nationality === 'GG') ? 'selected' : '' %>>Guernseyman / Woman</option>
+            <option value="GW" <%= (user.nationality === 'GW') ? 'selected' : '' %>>Guinea Bissauan</option>
+            <option value="GN" <%= (user.nationality === 'GN') ? 'selected' : '' %>>Guinean</option>
+            <option value="GY" <%= (user.nationality === 'GY') ? 'selected' : '' %>>Guyanese</option>
+            <option value="HT" <%= (user.nationality === 'HT') ? 'selected' : '' %>>Haitian</option>
+            <option value="HN" <%= (user.nationality === 'HN') ? 'selected' : '' %>>Honduran</option>
+            <option value="HK" <%= (user.nationality === 'HK') ? 'selected' : '' %>>Hong Konger</option>
+            <option value="HU" <%= (user.nationality === 'HU') ? 'selected' : '' %>>Hungarian</option>
+            <option value="IS" <%= (user.nationality === 'IS') ? 'selected' : '' %>>Icelander</option>
+            <option value="IN" <%= (user.nationality === 'IN') ? 'selected' : '' %>>Indian</option>
+            <option value="ID" <%= (user.nationality === 'ID') ? 'selected' : '' %>>Indonesian</option>
+            <option value="IR" <%= (user.nationality === 'IR') ? 'selected' : '' %>>Iranian</option>
+            <option value="IQ" <%= (user.nationality === 'IQ') ? 'selected' : '' %>>Iraqi</option>
+            <option value="IE" <%= (user.nationality === 'IE') ? 'selected' : '' %>>Irish</option>
+            <option value="IL" <%= (user.nationality === 'IL') ? 'selected' : '' %>>Israeli</option>
+            <option value="IT" <%= (user.nationality === 'IT') ? 'selected' : '' %>>Italian</option>
+            <option value="CI" <%= (user.nationality === 'CI') ? 'selected' : '' %>>Ivorian</option>
+            <option value="JM" <%= (user.nationality === 'JM') ? 'selected' : '' %>>Jamaican</option>
+            <option value="JP" <%= (user.nationality === 'JP') ? 'selected' : '' %>>Japanese</option>
+            <option value="JE" <%= (user.nationality === 'JE') ? 'selected' : '' %>>Jerseyman / Woman</option>
+            <option value="JO" <%= (user.nationality === 'JO') ? 'selected' : '' %>>Jordanian</option>
+            <option value="KZ" <%= (user.nationality === 'KZ') ? 'selected' : '' %>>Kazakhstani</option>
+            <option value="KE" <%= (user.nationality === 'KE') ? 'selected' : '' %>>Kenyan</option>
+            <option value="KI" <%= (user.nationality === 'KI') ? 'selected' : '' %>>I-Kiribati</option>
+            <option value="KN" <%= (user.nationality === 'KN') ? 'selected' : '' %>>Kittitian &amp; Nevisian</option>
+            <option value="KP" <%= (user.nationality === 'KP') ? 'selected' : '' %>>Korean, North</option>
+            <option value="KR" <%= (user.nationality === 'KR') ? 'selected' : '' %>>Korean, South </option>
+            <option value="KW" <%= (user.nationality === 'KW') ? 'selected' : '' %>>Kuwaiti</option>
+            <option value="KG" <%= (user.nationality === 'KG') ? 'selected' : '' %>>Kyrgyz</option>
+            <option value="LA" <%= (user.nationality === 'LA') ? 'selected' : '' %>>Laotian</option>
+            <option value="LV" <%= (user.nationality === 'LV') ? 'selected' : '' %>>Latvian</option>
+            <option value="LB" <%= (user.nationality === 'LB') ? 'selected' : '' %>>Lebanese</option>
+            <option value="LR" <%= (user.nationality === 'LR') ? 'selected' : '' %>>Liberian</option>
+            <option value="LY" <%= (user.nationality === 'LY') ? 'selected' : '' %>>Libyan</option>
+            <option value="LI" <%= (user.nationality === 'LI') ? 'selected' : '' %>>Liechtensteiner</option>
+            <option value="LT" <%= (user.nationality === 'LT') ? 'selected' : '' %>>Lithuanian</option>
+            <option value="LU" <%= (user.nationality === 'LU') ? 'selected' : '' %>>Luxembourger</option>
+            <option value="MO" <%= (user.nationality === 'MO') ? 'selected' : '' %>>Macanese</option>
+            <option value="MK" <%= (user.nationality === 'MK') ? 'selected' : '' %>>Macedonian</option>
+            <option value="MG" <%= (user.nationality === 'MG') ? 'selected' : '' %>>Malagasy</option>
+            <option value="MW" <%= (user.nationality === 'MW') ? 'selected' : '' %>>Malawian</option>
+            <option value="MY" <%= (user.nationality === 'MY') ? 'selected' : '' %>>Malaysian</option>
+            <option value="MV" <%= (user.nationality === 'MV') ? 'selected' : '' %>>Maldivan</option>
+            <option value="ML" <%= (user.nationality === 'ML') ? 'selected' : '' %>>Malian</option>
+            <option value="MT" <%= (user.nationality === 'MT') ? 'selected' : '' %>>Maltese</option>
+            <option value="IM" <%= (user.nationality === 'IM') ? 'selected' : '' %>>Manx</option>
+            <option value="MH" <%= (user.nationality === 'MH') ? 'selected' : '' %>>Marshallese</option>
+            <option value="MQ" <%= (user.nationality === 'MQ') ? 'selected' : '' %>>Martiniquais</option>
+            <option value="MR" <%= (user.nationality === 'MR') ? 'selected' : '' %>>Mauritanian</option>
+            <option value="MU" <%= (user.nationality === 'MU') ? 'selected' : '' %>>Mauritian</option>
+            <option value="YT" <%= (user.nationality === 'YT') ? 'selected' : '' %>>Mayhorais</option>
+            <option value="MX" <%= (user.nationality === 'MX') ? 'selected' : '' %>>Mexican</option>
+            <option value="FM" <%= (user.nationality === 'FM') ? 'selected' : '' %>>Micronesian</option>
+            <option value="MD" <%= (user.nationality === 'MD') ? 'selected' : '' %>>Moldovan</option>
+            <option value="MC" <%= (user.nationality === 'MC') ? 'selected' : '' %>>Monacan</option>
+            <option value="MN" <%= (user.nationality === 'MN') ? 'selected' : '' %>>Mongolian</option>
+            <option value="ME" <%= (user.nationality === 'ME') ? 'selected' : '' %>>Montenegrin</option>
+            <option value="MS" <%= (user.nationality === 'MS') ? 'selected' : '' %>>Montserratian</option>
+            <option value="MA" <%= (user.nationality === 'MA') ? 'selected' : '' %>>Moroccan</option>
+            <option value="LS" <%= (user.nationality === 'LS') ? 'selected' : '' %>>Mosotho</option>
+            <option value="MZ" <%= (user.nationality === 'MZ') ? 'selected' : '' %>>Mozambican</option>
+            <option value="MM" <%= (user.nationality === 'MM') ? 'selected' : '' %>>Myanmar / Burmese</option>
+            <option value="NA" <%= (user.nationality === 'NA') ? 'selected' : '' %>>Namibian</option>
+            <option value="NR" <%= (user.nationality === 'NR') ? 'selected' : '' %>>Nauruan</option>
+            <option value="NP" <%= (user.nationality === 'NP') ? 'selected' : '' %>>Nepalese</option>
+            <option value="NC" <%= (user.nationality === 'NC') ? 'selected' : '' %>>New Caledonian</option>
+            <option value="NZ" <%= (user.nationality === 'NZ') ? 'selected' : '' %>>New Zealander</option>
+            <option value="NI" <%= (user.nationality === 'NI') ? 'selected' : '' %>>Nicaraguan</option>
+            <option value="NG" <%= (user.nationality === 'NG') ? 'selected' : '' %>>Nigerian</option>
+            <option value="NE" <%= (user.nationality === 'NE') ? 'selected' : '' %>>Nigerien</option>
+            <option value="NU" <%= (user.nationality === 'NU') ? 'selected' : '' %>>Niuean</option>
+            <option value="NF" <%= (user.nationality === 'NF') ? 'selected' : '' %>>Norfolk Islander</option>
+            <option value="MP" <%= (user.nationality === 'MP') ? 'selected' : '' %>>Northern Mariana Islander</option>
+            <option value="NO" <%= (user.nationality === 'NO') ? 'selected' : '' %>>Norwegian</option>
+            <option value="BV" <%= (user.nationality === 'BV') ? 'selected' : '' %>>Norwegian - Bouvet Islands</option>
+            <option value="OM" <%= (user.nationality === 'OM') ? 'selected' : '' %>>Omani</option>
+            <option value="PK" <%= (user.nationality === 'PK') ? 'selected' : '' %>>Pakistani</option>
+            <option value="PW" <%= (user.nationality === 'PW') ? 'selected' : '' %>>Palauan</option>
+            <option value="PS" <%= (user.nationality === 'PS') ? 'selected' : '' %>>Palestinian</option>
+            <option value="PA" <%= (user.nationality === 'PA') ? 'selected' : '' %>>Panamanian</option>
+            <option value="PG" <%= (user.nationality === 'PG') ? 'selected' : '' %>>Papua New Guinean</option>
+            <option value="PY" <%= (user.nationality === 'PY') ? 'selected' : '' %>>Paraguayan</option>
+            <option value="PE" <%= (user.nationality === 'PE') ? 'selected' : '' %>>Peruvian</option>
+            <option value="PH" <%= (user.nationality === 'PH') ? 'selected' : '' %>>Philippine</option>
+            <option value="PN" <%= (user.nationality === 'PN') ? 'selected' : '' %>>Pitcairnese</option>
+            <option value="PL" <%= (user.nationality === 'PL') ? 'selected' : '' %>>Polish</option>
+            <option value="PT" <%= (user.nationality === 'PT') ? 'selected' : '' %>>Portuguese</option>
+            <option value="PR" <%= (user.nationality === 'PR') ? 'selected' : '' %>>Puerto Rican</option>
+            <option value="QA" <%= (user.nationality === 'QA') ? 'selected' : '' %>>Qatari</option>
+            <option value="RE" <%= (user.nationality === 'RE') ? 'selected' : '' %>>Reunionnais</option>
+            <option value="RO" <%= (user.nationality === 'RO') ? 'selected' : '' %>>Romanian</option>
+            <option value="RU" <%= (user.nationality === 'RU') ? 'selected' : '' %>>Russian</option>
+            <option value="RW" <%= (user.nationality === 'RW') ? 'selected' : '' %>>Rwandan</option>
+            <option value="EH" <%= (user.nationality === 'EH') ? 'selected' : '' %>>Sahrawi</option>
+            <option value="SH" <%= (user.nationality === 'SH') ? 'selected' : '' %>>Saint Helenian</option>
+            <option value="LC" <%= (user.nationality === 'LC') ? 'selected' : '' %>>Saint Lucian</option>
+            <option value="SV" <%= (user.nationality === 'SV') ? 'selected' : '' %>>Salvadorian</option>
+            <option value="WS" <%= (user.nationality === 'WS') ? 'selected' : '' %>>Samoan</option>
+            <option value="SM" <%= (user.nationality === 'SM') ? 'selected' : '' %>>San Marinese</option>
+            <option value="ST" <%= (user.nationality === 'ST') ? 'selected' : '' %>>Sao Tomean</option>
+            <option value="SA" <%= (user.nationality === 'SA') ? 'selected' : '' %>>Saudi Arabian</option>
+            <option value="SN" <%= (user.nationality === 'SN') ? 'selected' : '' %>>Senegalese</option>
+            <option value="RS" <%= (user.nationality === 'RS') ? 'selected' : '' %>>Serbian</option>
+            <option value="SC" <%= (user.nationality === 'SC') ? 'selected' : '' %>>Seychellois</option>
+            <option value="SL" <%= (user.nationality === 'SL') ? 'selected' : '' %>>Sierra Leonean</option>
+            <option value="SG" <%= (user.nationality === 'SG') ? 'selected' : '' %>>Singaporean</option>
+            <option value="SK" <%= (user.nationality === 'SK') ? 'selected' : '' %>>Slovakian</option>
+            <option value="SI" <%= (user.nationality === 'SI') ? 'selected' : '' %>>Slovenian</option>
+            <option value="SB" <%= (user.nationality === 'SB') ? 'selected' : '' %>>Solomon Islander</option>
+            <option value="SO" <%= (user.nationality === 'SO') ? 'selected' : '' %>>Somali</option>
+            <option value="ZA" <%= (user.nationality === 'ZA') ? 'selected' : '' %>>South African</option>
+            <option value="SS" <%= (user.nationality === 'SS') ? 'selected' : '' %>>South Sudanese</option>
+            <option value="ES" <%= (user.nationality === 'ES') ? 'selected' : '' %>>Spanish</option>
+            <option value="LK" <%= (user.nationality === 'LK') ? 'selected' : '' %>>Sri Lankan</option>
+            <option value="SD" <%= (user.nationality === 'SD') ? 'selected' : '' %>>Sudanese</option>
+            <option value="SR" <%= (user.nationality === 'SR') ? 'selected' : '' %>>Surinamer</option>
+            <option value="SJ" <%= (user.nationality === 'SJ') ? 'selected' : '' %>>Svalbard And Jan Mayen</option>
+            <option value="SZ" <%= (user.nationality === 'SZ') ? 'selected' : '' %>>Swazi</option>
+            <option value="SE" <%= (user.nationality === 'SE') ? 'selected' : '' %>>Swedish</option>
+            <option value="CH" <%= (user.nationality === 'CH') ? 'selected' : '' %>>Swiss</option>
+            <option value="SY" <%= (user.nationality === 'SY') ? 'selected' : '' %>>Syrian</option>
+            <option value="TW" <%= (user.nationality === 'TW') ? 'selected' : '' %>>Taiwanese</option>
+            <option value="TJ" <%= (user.nationality === 'TJ') ? 'selected' : '' %>>Tajik</option>
+            <option value="TZ" <%= (user.nationality === 'TZ') ? 'selected' : '' %>>Tanzanian</option>
+            <option value="TH" <%= (user.nationality === 'TH') ? 'selected' : '' %>>Thai</option>
+            <option value="TL" <%= (user.nationality === 'TL') ? 'selected' : '' %>>Timorese</option>
+            <option value="TG" <%= (user.nationality === 'TG') ? 'selected' : '' %>>Togolese</option>
+            <option value="TK" <%= (user.nationality === 'TK') ? 'selected' : '' %>>Tokelauan</option>
+            <option value="TO" <%= (user.nationality === 'TO') ? 'selected' : '' %>>Tongolese</option>
+            <option value="TT" <%= (user.nationality === 'TT') ? 'selected' : '' %>>Trinidadian or Tobagonian</option>
+            <option value="TN" <%= (user.nationality === 'TN') ? 'selected' : '' %>>Tunisian</option>
+            <option value="TR" <%= (user.nationality === 'TR') ? 'selected' : '' %>>Turkish</option>
+            <option value="TM" <%= (user.nationality === 'TM') ? 'selected' : '' %>>Turkmen</option>
+            <option value="TC" <%= (user.nationality === 'TC') ? 'selected' : '' %>>Turks &amp; Caicos Islander</option>
+            <option value="TV" <%= (user.nationality === 'TV') ? 'selected' : '' %>>Tuvaluan</option>
+            <option value="UG" <%= (user.nationality === 'UG') ? 'selected' : '' %>>Ugandan</option>
+            <option value="UA" <%= (user.nationality === 'UA') ? 'selected' : '' %>>Ukrainian</option>
+            <option value="UY" <%= (user.nationality === 'UY') ? 'selected' : '' %>>Uruguayan</option>
+            <option value="UZ" <%= (user.nationality === 'UZ') ? 'selected' : '' %>>Uzbekistani</option>
+            <option value="VU" <%= (user.nationality === 'VU') ? 'selected' : '' %>>Vanuatuan</option>
+            <option value="VA" <%= (user.nationality === 'VA') ? 'selected' : '' %>>Vatican City Citizen</option>
+            <option value="VE" <%= (user.nationality === 'VE') ? 'selected' : '' %>>Venezuelan</option>
+            <option value="VN" <%= (user.nationality === 'VN') ? 'selected' : '' %>>Vietnamese</option>
+            <option value="VC" <%= (user.nationality === 'VC') ? 'selected' : '' %>>Vincentian or Saint Vincentian </option>
+            <option value="VI" <%= (user.nationality === 'VI') ? 'selected' : '' %>>United States Virgin Islander</option>
+            <option value="WF" <%= (user.nationality === 'WF') ? 'selected' : '' %>>Wallis And Futuna Islander</option>
+            <option value="YE" <%= (user.nationality === 'YE') ? 'selected' : '' %>>Yemenite</option>
+            <option value="ZM" <%= (user.nationality === 'ZM') ? 'selected' : '' %>>Zambian</option>
+            <option value="ZW" <%= (user.nationality === 'ZW') ? 'selected' : '' %>>Zimbabwean</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="large-5 columns">
+        <label>Employment Status
+          <select name="employment_status">
+            <option value="E" <%= (user.employment_status === 'E') ? 'selected' : '' %>>Employed</option>
+            <option value="H" <%= (user.employment_status === 'H') ? 'selected' : '' %>>Homemaker</option>
+            <option value="K" <%= (user.employment_status === 'K') ? 'selected' : '' %>>Key/part time</option>
+            <option value="O" <%= (user.employment_status === 'O') ? 'selected' : '' %>>Full time education</option>
+            <option value="P" <%= (user.employment_status === 'P') ? 'selected' : '' %>>Receiving pension/disability benefit</option>
+            <option value="S" <%= (user.employment_status === 'S') ? 'selected' : '' %>>Self employed</option>
+            <option value="U" <%= (user.employment_status === 'U') ? 'selected' : '' %>>Unemployed</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns">
+        <label>Home Address
+          <textarea name="address" value="<%= user.address %>"></textarea>
+        </label>
+      </div>
+    </div>
+
+    <div class="row __qf-sm-row">
+      <div class="large-4 columns">
+        <label>Username
+          <input type="text" name="username" value="<%= user.username %>">
+        </label>
+      </div>
+
+      <div class="large-4 columns">
+        <label>Password
+          <input type="password" name="password" value="<%= user.password %>">
+        </label>
+      </div>
+
+      <div class="large-4 columns">
+        <label>Email Address
+          <input type="email" name="email" value="<%= user.email %>">
+        </label>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="content" id="panel3-5">
+  <div class="medium-9 columns">
+    <h4>Money Received - Transactions</h4>
+
+    <table>
+      <thead>
+        <tr>
+          <th>From User</th>
+          <th>From Account</th>
+          <th>To User</th>
+          <th>To Account</th>
+          <th>Amount</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i=0; i < user.transactionsReceived.length; i++) { %>
+          <tr>
+            <td><%= (user.id == user.transactionsReceived[i].fromUser) ? 'Me' : user.transactionsReceived[i].fromUser %></td>
+            <td><%= user.transactionsReceived[i].fromAccount %></td>
+            <td><%= (user.id == user.transactionsReceived[i].toUser) ? 'Me' : user.transactionsReceived[i].toUser %></td>
+            <td><%= user.transactionsReceived[i].toAccount %></td>
+            <td><%= user.transactionsReceived[i].amount %></td>
+            <td>
+              <a href="/transaction/<%= user.transactionsReceived[i].id %>/delete" title="Delete Transaction. The money will not be transferred back!">
+                <span class="alert round label">DEL</span>
+              </a>
+              <!--<a href="/transaction/<%= user.transactionsReceived[i].id %>/undo" title="Undo Transaction">
+                <span class="success round label">UNDO</span>
+              </a>-->
+            </td>
+          </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+    <% if (!user.transactionsReceived.length) { %>
+      <p class="text-center">
+        You haven't received any money!
+      </p>
+    <% } %>
+  </div>
+</div>

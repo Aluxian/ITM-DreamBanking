@@ -1,0 +1,49 @@
+<!-- Default home page -->
+<div class="home-page">
+  <%- partial('partials/header') %>
+
+  <div class="row">
+    <section class="large-9 columns">
+      <p class="description">Sails Bank is one of the safest banks in the world. We have over 1 million registered users in the world, and security is our greatest priority.</p>
+
+      <ul class="features-list">
+        <li>
+          <div class="step">
+            <div class="sprite one"></div>
+            <h3>Register a new User Account</h3>
+            <p>Your information is safely transferred through a 512-bit encrypted SSL connection. We value our customers as much as we value money.<br><a href="/register">Register now</a></p>
+          </div>
+        </li>
+
+        <li>
+          <div class="step">
+            <div class="sprite two"></div>
+            <h3>Transfer your Money</h3>
+            <p>The sooner your money is in our safe deposits, the better. Here's how it works:</p>
+            <ol>
+              <li>You send your money to us</li>
+              <li>We place it in our safe deposits, under water</li>
+              <li>You continue enjoying your happy life, knowing your money is safe</li>
+            </ol>
+          </div>
+        </li>
+
+        <li>
+          <div class="step">
+            <div class="sprite three"></div>
+            <h3>Transact</h3>
+            <p>Never worry about losing your money. Transactions are inevitably safe.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="large-3 columns">
+      <%- partial('partials/widgets') %>
+
+      <a href="/register" class="button success expand">Register Now</a>
+    </section>
+  </div>
+
+  <%- partial('partials/footer') %>
+</div>
